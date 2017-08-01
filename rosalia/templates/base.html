@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load staticfiles %}
+<html class="no-js" lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{% block title %}Yor title app name{% endblock title %}</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Rosalia | baby sitting{% endblock title %}</title>
   {# Start cssblock #}
+  <link rel="stylesheet" href="{% static "css/foundation.min.css" %}" />
   {% block cssblock %}
   {% endblock cssblock %}
 </head>
@@ -13,6 +17,10 @@
   {% endblock content %}
 
   {# Start jsblock #}
+  <script src="{% static "js/vendor/jquery.js" %}"></script>
+  <script src="{% static "js/vendor/what-input.js" %}"></script>
+  <script src="{% static "js/vendor/foundation.min.js" %}"></script>
+  <script src="{% static "js/app.js" %}"></script>
   {% block jsblock %}
   {% endblock jsblock %}
 </body>
