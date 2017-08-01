@@ -1,0 +1,14 @@
+# Django apps
+Django==1.11.3
+
+# Django heroku apps
+dj-database-url==0.4.2
+gunicorn==19.7.1
+whitenoise==3.3.0
+psycopg2==2.7.1
+
+# Some other useful tools
+# Pillow
+# django jet
+# psycopg2 #if uses postgresql
+# django rest framework

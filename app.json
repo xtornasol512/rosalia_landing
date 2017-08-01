@@ -1,0 +1,50 @@
+{
+  "name": "Heroku Django Project Boilerplate",
+  "description": "Example boilerplate app heroku",
+  "scripts": {
+    "postdeploy": "bin/post_deploy.sh"
+  },
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "HEROKU_PARENT_APP_NAME": {
+      "required": true
+    },
+    "AUTO_MIGRATE": {
+      "required": true
+    },
+    "SECRET_KEY": {
+      "required": true
+    },
+    "DEBUG_STATE": {
+      "required": true
+    },
+    "PRODUCTION": {
+      "required": true
+    },
+    "DISABLE_COLLECTSTATIC": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "papertrail",
+    "heroku-postgresql",
+    {
+      "plan": "deployhooks:http",
+      "options": {
+        "url": "https://hooks.zapier.com/hooks/catch/583174/t6paiu/"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}

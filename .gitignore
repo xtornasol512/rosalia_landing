@@ -1,0 +1,15 @@
+# Files to ignore
+*~
+*.pyc
+*.sqlite3
+*.DS_Store
+
+# Dirs to ignore
+venv/
+config/
+temp/
+.vagrant/
+
+# NEED CHANGE ON YOUR PROJECT !!
+boilerplate/media/
+boilerplate/staticfiles/
